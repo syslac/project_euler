@@ -47,7 +47,7 @@ int main()
     {
         runningSum += basicBlockSum.first;
         runningSum += basicBlockSum.second * i; 
-        latestBlock = i;
+        latestBlock = i + block;
     }
     // handle leftOver
     for (int i = latestBlock; i < limitNumber; i++) 
