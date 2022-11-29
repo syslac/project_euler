@@ -13,17 +13,13 @@ int main()
     for (int b = lowerBound; b < wantedSum; b++)
     {
         float a = 1000.0f * (1000.0f - 2.0f * float(b))/(2000.0f - 2.0f * float(b));
-        std::cout << a << std::endl;
         if (std::floor(a) == a)
         {
-            float c = sqrt(a*a + float(b)*float(b));
-            if (std::floor(c) == c)
-            {
-                triplet[0] = (int)a;
-                triplet[1] = b;
-                triplet[2] = (int)c;
-                break;
-            }
+            float c = wantedSum - a - b;
+            triplet[0] = (int)a;
+            triplet[1] = b;
+            triplet[2] = (int)c;
+            break;
         }
     }
     long product = triplet[0] * triplet[1] * triplet[2];
