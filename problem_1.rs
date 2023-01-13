@@ -1,4 +1,4 @@
-use std::time::{Duration, Instant};
+use std::time::{Instant};
 
 const LIMIT_NUMBER: usize = 1000;
 const BLOCK_SIZE: usize = 30;
